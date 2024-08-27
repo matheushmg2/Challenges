@@ -10,31 +10,16 @@ import { PaginationDesktop } from "./PaginationDesktop";
 export const HomeComponent = () => {
   const { cars } = useCars();
 
-  const onClickLeft = () => {
+  const onClickNavigate = (left: boolean) => {
     let cardList = document.getElementById("card-list");
 
     let card = cardList?.firstElementChild;
-    let cardSize = (card?.clientWidth ?? 0) + 24; // Tamanho do card
+    let cardSize = (card?.clientWidth ?? 0) + 24;
 
-    let scrollPosition = cardList?.scrollLeft ?? 0; // Posição atual
-    
-    if(scrollPosition >= cardSize ) {
-      cardList?.scrollTo({ left: scrollPosition - cardSize})
-    }
+    let scrollPositionCurrent = cardList?.scrollLeft ?? 0;
 
-  };
-  const onClickRight = () => {
-    let cardList = document.getElementById("card-list");
-    let scrollSize = cardList?.scrollWidth ?? 0; // Tamanho total da div
-
-    let card = cardList?.firstElementChild;
-    let cardSize = (card?.clientWidth ?? 0) + 24; // Tamanho do card
-
-    let scrollPosition = cardList?.scrollLeft ?? 0; // Posição atual
-    
-    if(scrollPosition + cardSize <= scrollSize ) {
-      cardList?.scrollTo({ left: scrollPosition + cardSize})
-    }
+    if (left) cardList?.scrollTo({ left: scrollPositionCurrent - cardSize });
+    else cardList?.scrollTo({ left: scrollPositionCurrent + cardSize });
   };
 
   return (
@@ -47,8 +32,8 @@ export const HomeComponent = () => {
         ))}
       </div>
       <PaginationDesktop
-        onClickLeft={onClickLeft}
-        onClickRight={onClickRight}
+        onClickLeft={() => onClickNavigate(true)}
+        onClickRight={() => onClickNavigate(false)}
       />
     </div>
   );
