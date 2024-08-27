@@ -5,12 +5,12 @@ import {
   Flex,
   Link,
   Row,
-  Spacer,
   Text,
 } from "vcc-ui";
 import { ICar } from "../types/car.interface";
 import Image from "next/image";
 import s from "../../public/css/components/carCard.module.css";
+import { Spacer } from "./Spacer";
 
 interface CardProps {
   car: ICar;
@@ -35,14 +35,14 @@ export const CarCard = ({ car }: CardProps) => {
         <Text variant={"amundsen"} extend={{ margin: 0, padding: 0 }}>
           {modelName}
         </Text>
-        <Text variant={"bates"} subStyle={"inline-link"} extend={{ margin: 0 }}>
+        <Text variant={"bates"}  extend={{ margin: "0 0 0 4px" }}>
           {modelType}
         </Text>
       </Flex>
 
-      <Spacer />
+      <Spacer height="16px" />
       <Image src={imageUrl} alt={modelName} width={250} height={200} />
-      <Spacer />
+      <Spacer height="12px" />
       <Flex
         extend={{
           justifyContent: "center",
@@ -50,12 +50,13 @@ export const CarCard = ({ car }: CardProps) => {
           flexDirection: "row",
         }}
       >
-        <Link href="https://www.volvocars.com/" arrow="right">
-          SHOP
-        </Link>
-        <Link href="https://www.volvocars.com/" arrow="right">
+        <Link className={s.link} href="https://www.volvocars.com/" arrow="right">
           LEARN
         </Link>
+        <Link  href="https://www.volvocars.com/" arrow="right">
+          SHOP
+        </Link>
+        
       </Flex>
     </div>
   );
