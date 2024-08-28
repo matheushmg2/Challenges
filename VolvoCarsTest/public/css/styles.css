@@ -2,13 +2,59 @@ body {
   background: white;
 }
 
-.slick-slider  {
+.slick-slider {
   height: 100%;
 }
 
 .slick-list {
-  width: 80rem;
+  width: 16rem;
 }
+@media only screen and (min-width: 524px) {
+  .slick-list {
+    width: 32rem;
+  }
+
+  .qntLength2 .slick-track {
+    transform: none !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .slick-list {
+    width: 47.5rem;
+  }
+
+  .qntLength3 .slick-track,
+  .qntLength2 .slick-track {
+    transform: none !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .slick-list {
+    width: 63rem;
+  }
+  
+  .qntLength4 .slick-track,
+  .qntLength3 .slick-track,
+  .qntLength2 .slick-track {
+    transform: none !important;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .slick-list {
+    width: 80rem;
+  }
+
+  .qntLength4 .slick-track,
+  .qntLength3 .slick-track,
+  .qntLength2 .slick-track {
+    transform: none !important;
+  }
+  
+}
+
 .slick-dots li button {
   width: 12px;
   height: 12px;
@@ -31,3 +77,4 @@ body {
 .slick-dots li button::before {
   color: transparent;
 }
+
