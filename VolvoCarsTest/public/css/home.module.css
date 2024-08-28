@@ -9,7 +9,7 @@
 }
 
 .cardsWrapper {
-  display: inline-block;
+  display: flex;
   width: auto;
   position: relative;
   height: 350px;
