@@ -1,0 +1,53 @@
+.homeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.homeWrapper .homeTitle {
+  font-size: 22px;
+  font-weight: bold;
+
+}
+
+.cardsWrapper {
+  display: flex;
+  width: auto;
+  position: relative;
+  height: 350px;
+}
+
+.customArrowleft,
+.customArrowright {
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+}
+
+.customArrowleft {
+  right: 40px;
+  transform: rotate(180deg);
+}
+
+.customArrowright {
+  right: 0;
+}
+
+.customArrowleft:hover,
+.customArrowright:hover {
+  cursor: pointer;
+}
+
+.customArrowleft:hover circle,
+.customArrowright:hover circle {
+  fill: #2c2b2b;
+}
+
+.customArrowleft:hover rect,
+.customArrowright:hover rect {
+  stroke: #f5f5f5;
+}
