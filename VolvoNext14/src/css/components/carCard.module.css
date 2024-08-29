@@ -1,0 +1,66 @@
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.cardWrapper .cardBodyType {
+  font-size: 12px;
+  font-weight: 600;
+  color: #737380;
+  text-transform: uppercase;
+}
+
+.cardWrapper .cardModel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.cardWrapper .cardModel .modelType,
+.cardWrapper .cardModel .modelName {
+  font-size: 14px;
+}
+
+.cardWrapper .cardModel .modelName {
+  font-weight: bold;
+  margin-right: 8px;
+}
+.cardWrapper .cardModel .modelType {
+  font-weight: 400;
+  color: #737380;
+}
+
+.cardWrapper .cardLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+.cardWrapper .cardLink a {
+  color: #1c6bba;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  padding: 2px 6px;
+}
+
+.cardWrapper .cardLink a:hover {
+    background: #1c6bba;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 2px 6px;
+}
+
+.cardWrapper .cardLink a svg {
+  width: 15px;
+}
+
+.cardWrapper .cardLink a:hover svg path {
+    stroke: #ffffff;
+}
